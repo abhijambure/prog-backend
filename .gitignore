@@ -1,0 +1,15 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Python artifacts and local runtime data
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.db
+*.log
+
+# Included for consistency when tooling creates Node artifacts
+node_modules/

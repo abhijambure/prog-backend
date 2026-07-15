@@ -11,18 +11,9 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# CORS Configuration
-# Allow local Vite dev server and any typical local addresses
-origins = [
-    "http://localhost:5173",
-    "http://127.0.0.1:5173",
-    "http://localhost:3000",
-    "http://localhost:8000"
-]
-
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"], # For ease of development, allow all. In production restrict this.
+    allow_origins=settings.CORS_ORIGINS,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
